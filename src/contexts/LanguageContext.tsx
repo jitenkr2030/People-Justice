@@ -15,7 +15,7 @@ const translations = {
     app: {
       title: "People's Justice",
       subtitle: "Legal Empowerment for Every Indian",
-      price: "₹99 (One-time)",
+      price: "Basic: ₹99 | Premium: ₹999/year",
       mission: "Make law simple, accessible, and usable for people without lawyers."
     },
     modules: {
@@ -63,7 +63,7 @@ const translations = {
     app: {
       title: "पीपल्स जस्टिस",
       subtitle: "हर भारतीय के लिए कानूनी सशक्तिकरण",
-      price: "₹99 (एक बार)",
+      price: "बेसिक: ₹99 | प्रीमियम: ₹999/वर्ष",
       mission: "कानून को बिना वकील के लोगों के लिए सरल, सुलभ और उपयोगी बनाएं।"
     },
     modules: {

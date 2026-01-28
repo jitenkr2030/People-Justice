@@ -14,7 +14,10 @@ import {
   Globe,
   Download,
   HelpCircle,
-  Phone
+  Phone,
+  Crown,
+  Star,
+  Zap
 } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import RTIGenerator from '@/components/RTIGenerator'
@@ -22,8 +25,11 @@ import KnowYourRights from '@/components/KnowYourRights'
 import LegalNoticeGenerator from '@/components/LegalNoticeGenerator'
 import ConsumerComplaint from '@/components/ConsumerComplaint'
 import NyayRakshak from '@/components/NyayRakshak'
+import SubscriptionPage from '@/components/SubscriptionPage'
 import { registerServiceWorker } from '@/lib/serviceWorker'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useSubscription } from '@/contexts/SubscriptionContext'
+import { NyayRakshakGate } from '@/components/FeatureGate'
 
 const modules = [
   {
@@ -32,7 +38,8 @@ const modules = [
     description: 'File Right to Information applications easily',
     icon: FileText,
     color: 'bg-blue-500',
-    features: ['Pre-built templates', 'Department auto-selection', 'Hindi & English support']
+    features: ['Pre-built templates', 'Department auto-selection', 'Hindi & English support'],
+    tier: 'basic' as const
   },
   {
     id: 'rights',
@@ -40,7 +47,8 @@ const modules = [
     description: 'Learn your legal rights in simple language',
     icon: Shield,
     color: 'bg-green-500',
-    features: ['Labour rights', 'Women rights', 'Police rights', 'Consumer rights']
+    features: ['Labour rights', 'Women rights', 'Police rights', 'Consumer rights'],
+    tier: 'basic' as const
   },
   {
     id: 'notice',
@@ -48,7 +56,8 @@ const modules = [
     description: 'Create professional legal notices',
     icon: AlertTriangle,
     color: 'bg-orange-500',
-    features: ['Payment disputes', 'Property issues', 'Service negligence', 'Fraud cases']
+    features: ['Payment disputes', 'Property issues', 'Service negligence', 'Fraud cases'],
+    tier: 'basic' as const
   },
   {
     id: 'complaint',
@@ -56,7 +65,8 @@ const modules = [
     description: 'Fight fraud and service issues',
     icon: ShoppingBag,
     color: 'bg-purple-500',
-    features: ['E-commerce fraud', 'Payment scams', 'Product issues', 'Service disputes']
+    features: ['E-commerce fraud', 'Payment scams', 'Product issues', 'Service disputes'],
+    tier: 'basic' as const
   },
   {
     id: 'nyayrakshak',
@@ -64,13 +74,16 @@ const modules = [
     description: 'BNS 2023 Legal Safety & Protection',
     icon: Shield,
     color: 'bg-red-500',
-    features: ['Situation Analyzer', 'Police Guide', 'Emergency Mode', 'Risk Assessment']
+    features: ['Situation Analyzer', 'Police Guide', 'Emergency Mode', 'Risk Assessment'],
+    tier: 'premium' as const
   }
 ]
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [currentView, setCurrentView] = useState('home')
+  const { t, language, setLanguage } = useLanguage()
+  const { subscription, currentPlan, canAccessFeature, isFeatureLocked } = useSubscription()
 
   const renderCurrentView = () => {
     switch(currentView) {
@@ -84,14 +97,14 @@ export default function Home() {
         return <ConsumerComplaint />
       case 'nyayrakshak':
         return <NyayRakshak />
+      case 'subscription':
+        return <SubscriptionPage />
       default:
         return <HomeView />
     }
   }
 
   const HomeView = () => {
-    const { t, language, setLanguage } = useLanguage()
-    
     useEffect(() => {
       registerServiceWorker()
     }, [])
@@ -122,6 +135,25 @@ export default function Home() {
                 <Globe className="w-4 h-4" />
                 <span>{language === 'en' ? 'English' : 'हिंदी'}</span>
               </Button>
+              
+              {subscription.tier === 'free' && (
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="hidden sm:flex items-center space-x-2 bg-purple-50 border-purple-200 text-purple-700 hover:bg-purple-100"
+                  onClick={() => setCurrentView('subscription')}
+                >
+                  <Crown className="w-4 h-4" />
+                  <span>Upgrade</span>
+                </Button>
+              )}
+              
+              {subscription.isActive && (
+                <Badge variant="outline" className="hidden sm:flex items-center space-x-1">
+                  <Crown className="w-3 h-3" />
+                  <span>{currentPlan?.name}</span>
+                </Badge>
+              )}
               
               <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
                 <SheetTrigger asChild>
@@ -164,7 +196,16 @@ export default function Home() {
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
             {t('app.mission')}
           </p>
-          <div className="text-2xl font-bold text-blue-600 mb-8">{t('app.price')}</div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-600">₹99</div>
+              <div className="text-sm text-gray-600">Basic - One Time</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-600">₹999</div>
+              <div className="text-sm text-gray-600">Premium - Per Year</div>
+            </div>
+          </div>
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             <Badge variant="secondary" className="text-sm">Hindi & English</Badge>
             <Badge variant="secondary" className="text-sm">Offline Support</Badge>
@@ -177,12 +218,26 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {modules.map((module) => {
             const Icon = module.icon
+            const isLocked = isFeatureLocked(module.tier)
+            const canAccess = canAccessFeature(module.tier)
+            
             return (
               <Card 
                 key={module.id}
-                className="cursor-pointer hover:shadow-lg transition-all duration-200 border-2 hover:border-blue-200"
-                onClick={() => setCurrentView(module.id)}
+                className={`cursor-pointer hover:shadow-lg transition-all duration-200 border-2 hover:border-blue-200 relative ${
+                  !canAccess ? 'opacity-75' : ''
+                }`}
+                onClick={() => canAccess ? setCurrentView(module.id) : setCurrentView('subscription')}
               >
+                {isLocked && (
+                  <div className="absolute top-2 right-2 z-10">
+                    <Badge variant="outline" className="text-xs border-purple-300 text-purple-700">
+                      <Crown className="w-3 h-3 mr-1" />
+                      Premium
+                    </Badge>
+                  </div>
+                )}
+                
                 <CardHeader className="pb-4">
                   <div className="flex items-start space-x-4">
                     <div className={`w-12 h-12 ${module.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
@@ -205,8 +260,16 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full mt-4" variant="outline">
-                    {t('common.getStarted')}
+                  <Button 
+                    className="w-full mt-4" 
+                    variant={canAccess ? "outline" : "default"}
+                  >
+                    {canAccess ? t('common.getStarted') : (
+                      <>
+                        <Crown className="w-4 h-4 mr-2" />
+                        Upgrade to Access
+                      </>
+                    )}
                   </Button>
                 </CardContent>
               </Card>

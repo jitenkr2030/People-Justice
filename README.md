@@ -4,13 +4,42 @@
 
 A comprehensive mobile-first Progressive Web App (PWA) that provides Indian citizens with accessible legal tools and guidance. Built with Next.js 16, TypeScript, and Tailwind CSS.
 
-**Price:** ₹99 (One-time)  
+**Price:** Basic ₹99 (One-time) | Premium ₹999/year  
 **Target Users:** Common citizens, workers, women, senior citizens, students, rural users  
 **Mission:** *Make law simple, accessible, and usable for people without lawyers.*
 
 ---
 
 ## ✨ Features
+
+### 🏛️ Subscription Tiers
+
+#### 📱 Basic Plan - ₹99 (One-time)
+- **RTI Generator** (5 templates)
+- **Legal Notice Generator** (3 templates)
+- **Consumer Complaint Generator**
+- **Know Your Rights** (full access)
+- **Hindi & English support**
+- **Offline mode**
+- **Document downloads**
+- **Email support**
+
+#### 👑 Premium Plan - ₹999/year
+- **Everything in Basic, plus:**
+- **NyayRakshak** - BNS 2023 Legal Safety Tool
+- **Unlimited RTI templates**
+- **Unlimited Legal Notice templates**
+- **Advanced Consumer Complaint tools**
+- **Situation Analyzer & Risk Meter**
+- **Emergency Mode & Police Guide**
+- **Evidence Checklist & Preservation**
+- **Priority customer support**
+- **Video guides & tutorials**
+- **Legal updates & notifications**
+- **Document cloud storage**
+- **Lawyer directory access**
+- **Case tracking system**
+- **Family sharing** (up to 5 members)
 
 ### 🏛️ Core Legal Modules
 
