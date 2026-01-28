@@ -1087,6 +1087,13 @@ export default function NyayRakshak() {
             {renderCurrentView()}
           </CardContent>
         </Card>
+        
+        {/* Legal Disclaimer */}
+        <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+          <p className="text-sm text-amber-800 font-semibold">
+            This platform does not replace a lawyer or court.
+          </p>
+        </div>
       </main>
 
       {/* Footer */}

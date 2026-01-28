@@ -10,6 +10,17 @@ A comprehensive mobile-first Progressive Web App (PWA) that provides Indian citi
 
 ---
 
+## ⚠️ **IMPORTANT LEGAL DISCLAIMER**
+
+**This platform does not replace a lawyer or court.**
+
+This single sentence protects you from:
+- Bar Council issues
+- Misrepresentation claims  
+- App takedowns
+
+---
+
 ## ✨ Features
 
 ### 🏛️ Subscription Tiers
@@ -227,6 +238,8 @@ people-justice/
 ## ⚖️ Legal & Compliance
 
 ### Disclaimer
+> **This platform does not replace a lawyer or court.**
+> 
 > People's Justice provides legal information and document assistance, not legal advice. For complex matters, consult a qualified lawyer.
 
 ### Compliance

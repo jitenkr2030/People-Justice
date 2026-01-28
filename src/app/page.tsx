@@ -319,6 +319,9 @@ export default function Home() {
             <strong>Disclaimer:</strong> People's Justice provides legal information and document assistance, not legal advice. 
             For complex matters, consult a qualified lawyer.
           </p>
+          <p className="text-sm text-amber-800 mt-2 font-semibold">
+            This platform does not replace a lawyer or court.
+          </p>
         </div>
       </main>
 
