@@ -1,0 +1,121 @@
+{
+  "name": "People's Justice - Legal Empowerment",
+  "short_name": "People's Justice",
+  "description": "Affordable Legal Empowerment for Every Indian - RTI, Rights, Legal Notices, Consumer Complaints",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["legal", "education", "productivity", "business"],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home-screen.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home screen showing all legal modules"
+    },
+    {
+      "src": "/screenshots/rti-generator.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "RTI Generator module interface"
+    },
+    {
+      "src": "/screenshots/rights-screen.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Know Your Rights module"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "RTI Generator",
+      "short_name": "RTI",
+      "description": "Generate RTI applications",
+      "url": "/rti",
+      "icons": [{ "src": "/icons/rti-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Know Your Rights",
+      "short_name": "Rights",
+      "description": "Learn your legal rights",
+      "url": "/rights",
+      "icons": [{ "src": "/icons/rights-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Legal Notice",
+      "short_name": "Notice",
+      "description": "Create legal notices",
+      "url": "/notice",
+      "icons": [{ "src": "/icons/notice-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Consumer Complaint",
+      "short_name": "Complaint",
+      "description": "File consumer complaints",
+      "url": "/complaint",
+      "icons": [{ "src": "/icons/complaint-icon.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
