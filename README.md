@@ -1,141 +1,317 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 🏛️ People's Justice
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+**Affordable Legal Empowerment for Every Indian**
 
-## ✨ Technology Stack
+A comprehensive mobile-first Progressive Web App (PWA) that provides Indian citizens with accessible legal tools and guidance. Built with Next.js 16, TypeScript, and Tailwind CSS.
 
-This scaffold provides a robust foundation built with:
-
-### 🎯 Core Framework
-- **⚡ Next.js 16** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
-
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
-
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
-
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Fetch** - Promise-based HTTP request
-
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
-
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
-
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
-
-## 🎯 Why This Scaffold?
-
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
-
-## 🚀 Quick Start
-
-```bash
-# Install dependencies
-bun install
-
-# Start development server
-bun run dev
-
-# Build for production
-bun run build
-
-# Start production server
-bun start
-```
-
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
-
-## 🤖 Powered by Z.ai
-
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
-
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
-
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
-
-## 📁 Project Structure
-
-```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
-```
-
-## 🎨 Available Features & Components
-
-This scaffold includes a comprehensive set of modern web development tools:
-
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
-
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
-
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
-
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Fetch + TanStack Query
-- **State Management**: Simple and scalable with Zustand
-
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
-
-## 🤝 Get Started with Z.ai
-
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+**Price:** ₹99 (One-time)  
+**Target Users:** Common citizens, workers, women, senior citizens, students, rural users  
+**Mission:** *Make law simple, accessible, and usable for people without lawyers.*
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+## ✨ Features
+
+### 🏛️ Core Legal Modules
+
+#### 1. **RTI Generator**
+- Pre-built RTI templates by category (Land Records, Government Schemes, Education, Health, etc.)
+- Department auto-selection (Central & State)
+- Hindi & English support
+- Step-by-step guided form with 5 steps
+- PDF-ready RTI format generation
+- Draft saving functionality
+- Timeline reminders and submission guidelines
+
+#### 2. **Know Your Rights**
+- 6 comprehensive rights categories (Labour, Women, Police, Tenant, Consumer, Senior Citizens)
+- Simple "Do/Don't" explanations
+- Real-life examples for each right
+- Audio support for illiterate users
+- Emergency rights quick access
+- Bookmark and save functionality
+
+#### 3. **Legal Notice Generator**
+- 6 template categories (Salary Payment, Refund Denial, Rent Disputes, etc.)
+- Professional legal notice structure
+- Customizable content with form validation
+- PDF export and sharing capabilities
+- Clear legal disclaimers
+- Step-by-step guidance
+
+#### 4. **Consumer Complaint**
+- 8 complaint categories (E-commerce, Payments, Electronics, etc.)
+- Company-level complaint drafts
+- Evidence checklist and documentation
+- Consumer forum complaint templates
+- Step-by-step complaint timeline
+- Filing guidelines and support
+
+#### 5. 🚨 **NyayRakshak** - BNS 2023 Legal Safety
+- **Situation Analyzer**: Identify BNS sections and risk levels
+- **Police Interaction Guide**: What police can & cannot do
+- **Emergency Mode**: Arrest & notice safety protocols
+- **Legal Risk Meter**: Visual risk assessment (🟢🟡🔴)
+- **Complaint Generator**: Ready-to-use legal drafts
+- **Evidence Checklist**: Digital and physical evidence preservation
+- **Rights Library**: Comprehensive BNS and BNSS rights
+
+---
+
+## 🌟 Additional Features
+
+- **📱 Mobile-First PWA**: App-like experience on mobile devices
+- **🌐 Language Support**: Hindi & English with persistent preferences
+- **♿ Accessibility**: Screen reader support, large text mode, keyboard navigation
+- **🔒 Privacy & Security**: No data sharing, no mandatory login, local storage
+- **📴 Offline Mode**: Core functionality available without internet
+- **💾 Local Storage**: Draft saving and preference persistence
+- **🎯 Touch-Friendly**: Optimized for mobile interactions
+
+---
+
+## 🛠️ Technology Stack
+
+### Core Framework
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4 with shadcn/ui components
+- **State Management**: React hooks and Context API
+
+### UI/UX
+- **Components**: shadcn/ui component library
+- **Icons**: Lucide React
+- **Forms**: React Hook Form with validation
+- **Animations**: Framer Motion transitions
+
+### PWA Features
+- **Service Worker**: Offline caching and background sync
+- **Manifest**: App installation and shortcuts
+- **Responsive Design**: Mobile-first approach
+
+### Development Tools
+- **Package Manager**: Bun
+- **Linting**: ESLint with Next.js configuration
+- **Type Checking**: Strict TypeScript
+
+---
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js 18+ 
+- Bun package manager
+
+### Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/jitenkr2030/People-Justice.git
+   cd People-Justice
+   ```
+
+2. **Install dependencies**
+   ```bash
+   bun install
+   ```
+
+3. **Run development server**
+   ```bash
+   bun run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🚀 Usage
+
+### For Users
+
+1. **Open the app** on any device (mobile recommended)
+2. **Choose your language** (Hindi/English)
+3. **Select a module** based on your legal need
+4. **Follow step-by-step guidance** for your specific situation
+5. **Generate documents** or **get legal guidance** instantly
+
+### For Developers
+
+```bash
+# Development
+bun run dev          # Start development server
+bun run lint          # Run ESLint
+bun run build        # Build for production
+
+# Database (if using)
+bun run db:push      # Push schema to database
+bun run db:generate  # Generate Prisma client
+```
+
+---
+
+## 📱 PWA Installation
+
+### On Mobile
+1. Open the app in Chrome/Safari
+2. Tap "Add to Home Screen"
+3. Confirm installation
+
+### On Desktop
+1. Open the app in Chrome
+2. Click the install icon in the address bar
+3. Confirm installation
+
+---
+
+## 🏗️ Project Structure
+
+```
+people-justice/
+├── src/
+│   ├── app/                  # Next.js App Router
+│   │   ├── layout.tsx       # Root layout with providers
+│   │   ├── page.tsx         # Main home page
+│   │   └── globals.css      # Global styles
+│   ├── components/           # Reusable components
+│   │   ├── ui/              # shadcn/ui components
+│   │   ├── RTIGenerator.tsx # RTI Module
+│   │   ├── KnowYourRights.tsx
+│   │   ├── LegalNoticeGenerator.tsx
+│   │   ├── ConsumerComplaint.tsx
+│   │   └── NyayRakshak.tsx  # BNS Safety Module
+│   ├── contexts/            # React contexts
+│   │   └── LanguageContext.tsx
+│   ├── lib/                 # Utility functions
+│   │   └── serviceWorker.ts
+│   └── types/               # TypeScript definitions
+├── public/                  # Static assets
+│   ├── manifest.json        # PWA manifest
+│   ├── sw.js               # Service worker
+│   └── icons/              # App icons
+├── prisma/                 # Database schema
+└── docs/                   # Documentation
+```
+
+---
+
+## ⚖️ Legal & Compliance
+
+### Disclaimer
+> People's Justice provides legal information and document assistance, not legal advice. For complex matters, consult a qualified lawyer.
+
+### Compliance
+- No impersonation of legal professionals
+- No court representation claims
+- Consumer protection friendly
+- Based on Indian laws including BNS 2023
+
+### Data Privacy
+- No data sharing with third parties
+- No mandatory login required
+- Local storage for documents
+- Anonymous mode available
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Commit your changes**
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+4. **Push to the branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. **Open a Pull Request**
+
+### Development Guidelines
+- Follow TypeScript best practices
+- Use ESLint configuration
+- Test on mobile devices
+- Ensure accessibility compliance
+- Write clear commit messages
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **shadcn/ui** for beautiful UI components
+- **Tailwind CSS** for utility-first styling
+- **Lucide** for consistent iconography
+- **Next.js** for the powerful framework
+- **Indian Legal Community** for domain expertise
+
+---
+
+## 📞 Support
+
+### For Users
+- **Email**: support@peoplesjustice.app
+- **Help**: In-app help section
+- **Emergency**: Dial 112 for immediate police assistance
+
+### For Developers
+- **Issues**: [GitHub Issues](https://github.com/jitenkr2030/People-Justice/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/jitenkr2030/People-Justice/discussions)
+- **Documentation**: [Wiki](https://github.com/jitenkr2030/People-Justice/wiki)
+
+---
+
+## 🗺️ Roadmap
+
+### Upcoming Features
+- [ ] Regional language support (Marathi, Tamil, Bengali, etc.)
+- [ ] AI-powered legal assistant
+- [ ] Verified lawyer directory
+- [ ] Case tracking system
+- [ ] Document storage vault
+- [ ] Video consultation platform
+- [ ] Legal news and updates
+- [ ] Community forum
+
+### Technical Improvements
+- [ ] Enhanced offline capabilities
+- [ ] Real-time collaboration
+- [ ] Advanced analytics
+- [ ] Performance optimizations
+- [ ] Security enhancements
+
+---
+
+## 📈 Impact
+
+**People's Justice** aims to:
+- ✅ Democratize access to legal information
+- ✅ Reduce fear of legal processes
+- ✅ Enable self-help legal actions
+- ✅ Provide affordable legal empowerment
+- ✅ Bridge the justice gap in India
+
+**Every citizen deserves access to justice. People's Justice makes it possible.**
+
+---
+
+<div align="center">
+
+**⭐ Star this repository if it helped you!**
+
+**🔗 Share with others who might need legal assistance**
+
+**💝 Made with ❤️ for the people of India**
+
+</div>

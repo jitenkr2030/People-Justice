@@ -38,6 +38,11 @@ const translations = {
         title: "Consumer Complaint",
         description: "Fight fraud and service issues",
         features: ["E-commerce fraud", "Payment scams", "Product issues", "Service disputes"]
+      },
+      nyayrakshak: {
+        title: "NyayRakshak",
+        description: "BNS 2023 Legal Safety & Protection",
+        features: ["Situation Analyzer", "Police Guide", "Emergency Mode", "Risk Assessment"]
       }
     },
     common: {
@@ -81,6 +86,11 @@ const translations = {
         title: "उपभोक्ता शिकायत",
         description: "धोखाधड़ी और सेवा समस्याओं से लड़ें",
         features: ["ई-कॉमर्स धोखाधड़ी", "भुगतान घोटाले", "उत्पाद समस्याएं", "सेवा विवाद"]
+      },
+      nyayrakshak: {
+        title: "न्यायरक्षक",
+        description: "बीएनएस 2023 कानूनी सुरक्षा और संरक्षण",
+        features: ["स्थिति विश्लेषक", "पुलिस गाइड", "आपातकालीन मोड", "जोखिम मूल्यांकन"]
       }
     },
     common: {

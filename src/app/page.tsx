@@ -21,6 +21,7 @@ import RTIGenerator from '@/components/RTIGenerator'
 import KnowYourRights from '@/components/KnowYourRights'
 import LegalNoticeGenerator from '@/components/LegalNoticeGenerator'
 import ConsumerComplaint from '@/components/ConsumerComplaint'
+import NyayRakshak from '@/components/NyayRakshak'
 import { registerServiceWorker } from '@/lib/serviceWorker'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -56,6 +57,14 @@ const modules = [
     icon: ShoppingBag,
     color: 'bg-purple-500',
     features: ['E-commerce fraud', 'Payment scams', 'Product issues', 'Service disputes']
+  },
+  {
+    id: 'nyayrakshak',
+    title: 'NyayRakshak',
+    description: 'BNS 2023 Legal Safety & Protection',
+    icon: Shield,
+    color: 'bg-red-500',
+    features: ['Situation Analyzer', 'Police Guide', 'Emergency Mode', 'Risk Assessment']
   }
 ]
 
@@ -73,6 +82,8 @@ export default function Home() {
         return <LegalNoticeGenerator />
       case 'complaint':
         return <ConsumerComplaint />
+      case 'nyayrakshak':
+        return <NyayRakshak />
       default:
         return <HomeView />
     }
@@ -163,7 +174,7 @@ export default function Home() {
         </div>
 
         {/* Modules Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {modules.map((module) => {
             const Icon = module.icon
             return (
